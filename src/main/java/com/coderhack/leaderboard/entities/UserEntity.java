@@ -1,5 +1,6 @@
 package com.coderhack.leaderboard.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -11,17 +12,18 @@ import java.util.Set;
 @Data
 @Document(collation = "users")
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserEntity {
 
     @Id
     private String userId;
 
-    @NotNull
+    //@NotNull
     private String userName;
 
-    @NotNull
+    //@NotNull
     private Integer score;
 
-    @NotNull
+    //@NotNull
     private Set<Badge> badges;
 }

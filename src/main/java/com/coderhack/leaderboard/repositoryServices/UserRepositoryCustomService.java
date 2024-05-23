@@ -1,9 +1,9 @@
 package com.coderhack.leaderboard.repositoryServices;
 
-import com.coderhack.leaderboard.entities.UserEntity;
+import com.coderhack.leaderboard.dto.User;
 
 import java.util.List;
 
 public interface UserRepositoryCustomService {
-    List<UserEntity> findAllByOrderByScoreDesc();
+    List<User> findAllByOrderByScoreDesc();
 }
