@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Data
-@Document(collation = "users")
+@Document(collection = "users")
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserEntity {
