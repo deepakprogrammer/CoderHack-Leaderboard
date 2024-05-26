@@ -20,4 +20,18 @@ public class UserService {
     public UserEntity addUser(UserEntity user) {
         return userRepository.save(user);
     }
+
+    public UserEntity getUserById(String id) {
+        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
+    public void deleteUser(String id) {
+        userRepository.deleteById(id);
+    }
+
+    public UserEntity updateUser(String userId, int score) {
+        UserEntity user = getUserById(userId);
+        user.setScore(score);
+        return userRepository.save(user);
+    }
 }
