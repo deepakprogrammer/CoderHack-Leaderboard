@@ -6,24 +6,20 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.NotNull;
 import java.util.Set;
 
-@Data
 @Document(collection = "users")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserEntity {
 
-    @Id
-    private String userId;
+	@Id
+	private String userId;
 
-    //@NotNull
-    private String userName;
+	private String userName;
 
-    //@NotNull
-    private Integer score;
+	private Integer score;
 
-    //@NotNull
-    private Set<Badge> badges;
+	private Set<Badge> badges;
 }
